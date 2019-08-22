@@ -7,6 +7,8 @@ defmodule Solidex.MixProject do
       version: "0.1.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
+      package: package(),
+      description: description(),
       deps: deps()
     ]
   end
@@ -16,6 +18,17 @@ defmodule Solidex.MixProject do
     [
       extra_applications: [:logger]
     ]
+  end
+
+  def package do
+    [
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/solidexio/solidex"}
+    ]
+  end
+
+  def description do
+    "An open-source ecommerce platform built for speed and scale."
   end
 
   # Run "mix help deps" to learn about dependencies.
